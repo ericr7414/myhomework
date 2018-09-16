@@ -1,0 +1,272 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f0\fs24 \cf0 Eric Randolph\
+MBE 635\
+Homework Week 2\
+\
+\pard\pardeftab720\li720\fi-360\ri0\partightenfactor0
+\ls1\ilvl0
+\b \cf0 1.	Without using a text editor examine the contents of the file HapMap.fas.txt\
+\pard\pardeftab720\ri0\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+\cf0     ###- How many lines does this file contain? \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs22 \cf0 Erics-MacBook-Air:week 2 school$ wc -l HapMap.fas.txt\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+\cf0   378672 HapMap.fas.txt
+\f0\fs24 \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+
+\b \cf0     ###- How many characters?    (Hint: check out the options of wc)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs22 \cf0 Erics-MacBook-Air:week 2 school$ wc HapMap.fas.txt\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+\cf0   378672  378672 15503584 HapMap.fas.txt
+\f0\fs24 \
+    Line count.  Word count.  Character count. \
+\
+    
+\b ###- What is the first line of this file?    (Hint: read the man page of head)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\b0 \cf0      
+\f1\fs22 Erics-MacBook-Air:week 2 school$ head -1 HapMap.fas.txt \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+\cf0 >TP1_query_64
+\f0\fs24 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+
+\b \cf0     ###- What are the last 3 lines?    (Hint: read the man page of tail)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs22 \cf0 Erics-MacBook-Air:week 2 school$ tail -3 HapMap.fas.txt \
+CGATTTTTTTTTTTTATCAAAAATGTTATTTTTCTTATTTTGCCGCTGTCTTAAATGGCCCGCT\
+>TP95869_hit_64\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+\cf0 CGATTTTTTTTTTTTATCAAAAATGTTATTTTTCTTATTTTGCCGCTGTCTTAAATGGCCCTCT
+\f0\fs24 \
+\
+\
+    
+\b ###- How many sequences are in the file?    (Hint: use grep)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs22 \cf0 Erics-MacBook-Air:week 2 school$ grep -c ATGC* HapMap.fas.txt \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+\cf0 125432\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+
+\f0\b\fs24 \cf0 2. Using the file, grep_data.txt, write a series of grep statements that do the following:\
+\
+\
+###Print all lines that contain a phone number with an extension (the letter x or X followed by four digits).\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs22 \cf0 Erics-MacBook-Air:week 2 school$ grep [xX][0-9][0-9][0-9][0-9]$ grep_data.txt \
+714-555-7870 X7310\
+714-555-7870 x7309\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+\cf0 714-555-5350 x2134
+\f0\fs24 \
+\
+  
+\b ###Print all lines that begin with three digits followed by a blank using the repetition specifier (\{\})\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs22 \cf0 Erics-Air:week 2 school$ ggrep -P ^[0-9]\{3\}'\\s' grep_data.txt \
+401 S. Palm St.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+\cf0 440 Briercrest Ave.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+
+\b \cf0   ###Print all lines containing a vowel (a, e, i, o, or u) followed by a single character followed by the same vowel again. Thus, it will find \'93eve\'94 or \'93adam\'94 but not \'93vera\'94. Hint: \\( and \\).\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs22 \cf0 Erics-Air:week 2 school$ ggrep -Pi '([aeiou]).\\1' grep_data.txt \
+Steve Marshal\
+Sonora High School\
+Carl Hohl (aka Krazy Rabbit)\
+Steve Lawson\
+Rosemead High School\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+\cf0 Rosemead, CA 91770
+\f0\fs24 \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+
+\b \cf0   ###Print all lines that do not begin with a capital S.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs22 \cf0 Erics-Air:week 2 school$ ggrep -v ^S grep_data.txt \
+Esperanza High School\
+1830 N. Kellog Dr.\
+Anaheim, CA 92807-1281\
+714-555-7870 X7310\
+aztecwrestling@example.com\
+Brian Fortenbaugh\
+714-555-7870 x7309\
+\
+401 S. Palm St.\
+La Habra, CA 90631 \
+Carl Hohl (aka Krazy Rabbit)\
+562-555-9800\
+\
+Oct. 1, 2013 \
+Lakewood High School\
+440 Briercrest Ave.\
+Lakewood, CA 90713-2013\
+Andy Miramontes\
+562-555-1281\
+\
+Oct. 8, 2013\
+North Torrance High School\
+2013 W. 182nd\
+Torrance, CA 90504\
+Don Henderson\
+310-555-4412\
+\
+Oct. 15, 2013\
+El Dorado High School\
+1651 N. Valencia Ave.\
+Placentia, CA 90631\
+714-555-5350 x2134\
+Lawsonhawk@example.com\
+\
+Nov. 12, 2013\
+Rosemead High School\
+9063 E. Sepulveda Dr.\
+Rosemead, CA 91770\
+Daren de Heras\
+daren103@example.com\
+Erics-Air:week 2 school$ \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+
+\b \cf0 ###Write grep statements that use command-line options along with the pattern to do the following:\
+\
+  ###Print all lines that contain CA in either uppercase or lowercase.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs22 \cf0 Erics-Air:week 2 school$ ggrep -i CA grep_data.txt \
+Anaheim, CA 92807-1281\
+La Habra, CA 90631 \
+Carl Hohl (aka Krazy Rabbit)\
+Lakewood, CA 90713-2013\
+Torrance, CA 90504\
+Placentia, CA 90631\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+\cf0 Rosemead, CA 91770
+\f0\fs24 \
+\
+  
+\b ###Print all lines that contain an email address (they have an @ in them), preceded by the line number.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs22 \cf0 Erics-Air:week 2 school$ ggrep -n @ grep_data.txt \
+7:aztecwrestling@example.com\
+38:Lawsonhawk@example.com\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+\cf0 45:daren103@example.com\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+
+\b \cf0   ###Print all lines that do not contain the word Sep. (including the period).\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs22 \cf0 Erics-Air:week 2 school$ ggrep -vi SEP. grep_data.txt \
+Esperanza High School\
+1830 N. Kellog Dr.\
+Anaheim, CA 92807-1281\
+Steve Marshal\
+714-555-7870 X7310\
+aztecwrestling@example.com\
+Brian Fortenbaugh\
+714-555-7870 x7309\
+\
+Sonora High School\
+401 S. Palm St.\
+La Habra, CA 90631 \
+Carl Hohl (aka Krazy Rabbit)\
+562-555-9800\
+\
+Oct. 1, 2013 \
+Lakewood High School\
+440 Briercrest Ave.\
+Lakewood, CA 90713-2013\
+Andy Miramontes\
+562-555-1281\
+\
+Oct. 8, 2013\
+North Torrance High School\
+2013 W. 182nd\
+Torrance, CA 90504\
+Don Henderson\
+310-555-4412\
+\
+Oct. 15, 2013\
+El Dorado High School\
+1651 N. Valencia Ave.\
+Placentia, CA 90631\
+Steve Lawson\
+714-555-5350 x2134\
+Lawsonhawk@example.com\
+\
+Nov. 12, 2013\
+Rosemead High School\
+Rosemead, CA 91770\
+Daren de Heras\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+\cf0 daren103@example.com
+\f0\fs24 \
+\
+  
+\b ###Print all lines that contain the word de as a whole word.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+
+\b0 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\ri0\partightenfactor0
+
+\f1\fs22 \cf0 Erics-Air:week 2 school$ ggrep -w de grep_data.txt \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0\partightenfactor0
+\cf0 Daren de Heras
+\f0\fs24 \
+\pard\pardeftab720\ri0\partightenfactor0
+\cf0 \
+}
